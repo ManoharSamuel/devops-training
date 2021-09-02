@@ -1,0 +1,48 @@
+ text = para
+    for i in special1 :
+        para = para.replace(i,'')
+    word1 = para
+    word2 = word1[:70]
+    rword2 = word2[::-1]
+    print(rword2) 
+    rword2 = rword2.replace(' ', '')
+    new_word = ""
+    for i in rword2 :
+        new_word+=i+special2
+    
+    print(new_word.rstrip(new_word[-1]))
+    k = 0
+    for i in list1 :
+        if(i not in text):
+            k = 1
+            break
+        else :
+            continue    
+    if k ==0 :
+        print("Every string in "+str(list1)+" were present")
+    elif k == 1 :
+        print("Every string in "+str(list1)+" were not present")
+            
+    list = word1.split(' ')
+    list2 = []
+    for i in range(0,20) :
+        list2.append(list[i])
+    print(list2)
+    
+    new_words = []
+    
+    for i in list :
+        if i not in new_words :
+            new_words.append(i)
+    
+    count_words = []
+    for i in range(0, len(new_words)) :
+        if(list.count(new_words[i]) <3 ):
+            count_words.append(new_words[i])
+    
+    if count_words[-1] == '' :
+        count_words.pop()
+    
+    print(count_words[-20:])
+    
+    print(word1.rfind(strfind))
